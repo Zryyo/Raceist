@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { GameEngine } from './game/gameEngine';
 import { GameHUD } from './components/GameHUD';
 import { TitleScreen } from './components/TitleScreen';
@@ -198,6 +199,7 @@ export default function App() {
 
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-[#0c0d10] flex items-center justify-center">
+      <Analytics />
       {/* 60FPS Dedicated Canvas Mount Container */}
       <div className="relative w-full h-full max-w-[1440px] max-h-[900px] flex items-center justify-center">
         <canvas
